@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8c258d;
+  --color-primary-dark: #6a1a6a;
+  --color-danger: #e11b22;
+  --color-success: #198754;
+}
+
+html, body { 
+  height: 100%; 
+  width: 100%; 
+  overflow: hidden; 
+  background-color: #f4f4f4;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'SolaimanLipi', 'Siyam Rupali', 'Noto Sans Bengali', Arial, sans-serif;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  height: 100%;
+  max-height: 100dvh;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide scrollbar for customer list */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+@media print {
+  .app-container, .toast, .modal-overlay { display: none !important; }
+  #printArea { display: block !important; }
+  body { background: white; }
+}
+@media screen {
+  #printArea { display: none !important; }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Nizam Store Digital Ledger",
+  "description": "A digital ledger app for Nizam Store to manage customer dues and transactions.",
+  "requestFramePermissions": []
+}
